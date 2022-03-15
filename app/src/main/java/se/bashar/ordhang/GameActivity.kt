@@ -21,6 +21,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var gameWonTextView: TextView
     private lateinit var newGameButton: Button
     private lateinit var lettersLayout: ConstraintLayout
+    private lateinit var gameLostImg : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +29,8 @@ class GameActivity : AppCompatActivity() {
         imageView = findViewById(R.id.imageView)
         wordTextView = findViewById(R.id.wordTextView)
         lettersUsedTextView = findViewById(R.id.lettersUsedTextView)
-        gameLostTextView = findViewById(R.id.gameLostTextView)
+        //gameLostTextView = findViewById(R.id.gameLostTextView)
+        gameLostImg = findViewById(R.id.gameLostImageView)
         gameWonTextView = findViewById(R.id.gameWonTextView)
         newGameButton = findViewById(R.id.newGameButton)
         lettersLayout = findViewById(R.id.lettersLayout)
@@ -63,7 +65,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun showGameLost(wordToGuess: String) {
         wordTextView.text = wordToGuess
-        gameLostTextView.visibility = View.VISIBLE
+        gameLostImg.visibility = View.VISIBLE
         imageView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.game7))
         lettersLayout.visibility = View.GONE
     }

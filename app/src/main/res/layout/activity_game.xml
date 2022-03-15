@@ -14,22 +14,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/gameLostTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="-45"
-        android:text="FÖRLORADE!"
-        android:textColor="#BB4444"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        tools:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/imageView"
-        app:layout_constraintEnd_toEndOf="@id/imageView"
-        app:layout_constraintStart_toStartOf="@id/imageView"
-        app:layout_constraintTop_toTopOf="@id/imageView" />
-
-    <TextView
         android:id="@+id/gameWonTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -382,4 +366,15 @@
             android:textSize="24dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/gameLostImageView"
+        android:layout_width="169dp"
+        android:layout_height="223dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/rip" />
 </androidx.constraintlayout.widget.ConstraintLayout>
