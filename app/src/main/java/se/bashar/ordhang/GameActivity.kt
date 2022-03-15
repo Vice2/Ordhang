@@ -54,7 +54,7 @@ class GameActivity : AppCompatActivity() {
             is GameState.Lost -> showGameLost(gameState.wordToGuess)
             is GameState.Running -> {
                 wordTextView.text = gameState.underscoreWord
-                lettersUsedTextView.text = "Letters used: ${gameState.lettersUsed}"
+                lettersUsedTextView.text = "Använda bokstäver: ${gameState.lettersUsed}"
                 imageView.setImageDrawable(ContextCompat.getDrawable(this, gameState.drawable))
             }
             is GameState.Won -> showGameWon(gameState.wordToGuess)

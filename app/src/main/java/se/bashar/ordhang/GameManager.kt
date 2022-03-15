@@ -9,7 +9,7 @@ class GameManager {
     private lateinit var wordToGuess: String
     private val maxTries = 7
     private var currentTries = 0
-    private var drawable: Int = R.drawable.game0
+    private var drawable: Int = R.drawable.pic1
 
     fun startNewGame(): GameState {
         lettersUsed = ""
@@ -63,7 +63,7 @@ class GameManager {
 
     private fun getHangmanDrawable(): Int {
         return when (currentTries) {
-            0 -> R.drawable.game0
+            0 -> R.drawable.pic1
             1 -> R.drawable.game1
             2 -> R.drawable.game2
             3 -> R.drawable.game3
