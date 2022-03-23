@@ -7,14 +7,14 @@ class GameManager {
     private var lettersUsed: String = ""
     private lateinit var underscoreWord: String
     private lateinit var wordToGuess: String
-    private val maxTries = 7
+    private val maxTries = 8
     private var currentTries = 0
     private var drawable: Int = R.drawable.pic1
 
     fun startNewGame(): GameState {
         lettersUsed = ""
         currentTries = 0
-        drawable = R.drawable.game7
+        drawable = R.drawable.pic8
         val randomIndex = Random.nextInt(0, GameConstants.words.size)
         wordToGuess = GameConstants.words[randomIndex]
         generateUnderscores(wordToGuess)
@@ -64,14 +64,15 @@ class GameManager {
     private fun getHangmanDrawable(): Int {
         return when (currentTries) {
             0 -> R.drawable.pic1
-            1 -> R.drawable.game1
-            2 -> R.drawable.game2
-            3 -> R.drawable.game3
-            4 -> R.drawable.game4
-            5 -> R.drawable.game5
-            6 -> R.drawable.game6
-            7 -> R.drawable.game7
-            else -> R.drawable.game7
+            1 -> R.drawable.pic1
+            2 -> R.drawable.pic2
+            3 -> R.drawable.pic3
+            4 -> R.drawable.pic4
+            5 -> R.drawable.pic5
+            6 -> R.drawable.pic6
+            7 -> R.drawable.pic7
+            8 -> R.drawable.pic8
+            else -> R.drawable.pic8
         }
     }
 
